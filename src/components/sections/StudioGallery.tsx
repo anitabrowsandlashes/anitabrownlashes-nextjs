@@ -44,12 +44,18 @@ const layout = [
  */
 const mobileRowSpans: string[] = (() => {
   let portraitCount = 0;
-  return studioGalleryImages.map((img) => {
+  const spans = studioGalleryImages.map((img) => {
     if (img.width > img.height) return "row-span-1";
     const span = portraitCount % 2 === 0 ? "row-span-3" : "row-span-2";
     portraitCount += 1;
     return span;
   });
+  // Die letzten beiden Kacheln liegen auf Mobile nebeneinander in der
+  // Schlussreihe – gleiche Row-Span, damit die Collage unten bündig endet.
+  if (spans.length >= 2) {
+    spans[spans.length - 1] = spans[spans.length - 2];
+  }
+  return spans;
 })();
 
 export function StudioGallery() {
