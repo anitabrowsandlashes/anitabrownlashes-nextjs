@@ -9,10 +9,9 @@ export function Statement() {
           <AnimatedQuote
             className="font-serif text-[1.6rem] leading-[1.55] tracking-[0.02em] text-white sm:text-[2.1rem] md:text-[2.6rem]"
             parts={[
-              { text: "Schönheit entsteht dort, wo man" },
-              { text: "sich wohlfühlt", emphasis: true },
-              { text: "— und ein Blick beginnt, für sich selbst zu" },
-              { text: "sprechen.", emphasis: true },
+              { text: "Ausstrahlung beginnt dort, wo du" },
+              { text: "ganz du selbst", emphasis: true },
+              { text: "bist." },
             ]}
             emphasisClassName="text-accent-on-dark not-italic"
           />

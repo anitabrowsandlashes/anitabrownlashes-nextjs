@@ -3,8 +3,8 @@ export const business = {
   legalName: "Anita Lakatos e. U.",
   phone: "+43 699 1716 0022",
   phoneHref: "tel:+4369917160022",
-  email: "anitabrowslashes@gmail.com",
-  emailHref: "mailto:anitabrowslashes@gmail.com",
+  email: "hallo@anitabrowsandlashes.at",
+  emailHref: "mailto:hallo@anitabrowsandlashes.at",
   whatsapp: "https://wa.me/4369917160022",
   website: "https://wimpernverlangerungwien.at/",
   address: {
