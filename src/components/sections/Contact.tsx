@@ -1,5 +1,6 @@
 import { business, bookingUrl } from "@/lib/data/business";
 import { Reveal } from "@/components/ui/Reveal";
+import { MapEmbed } from "@/components/ui/MapEmbed";
 
 export function Contact() {
   return (
@@ -122,13 +123,9 @@ export function Contact() {
             delay={200}
             className="min-h-[420px] overflow-hidden border border-white/15 md:col-span-3"
           >
-            <iframe
-              title="Anita Brows & Lashes – Standort"
+            <MapEmbed
               src={business.mapsEmbedUrl}
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-              className="block h-full min-h-[420px] w-full"
-              style={{ border: 0 }}
+              title="Anita Brows & Lashes – Standort"
             />
           </Reveal>
         </div>
