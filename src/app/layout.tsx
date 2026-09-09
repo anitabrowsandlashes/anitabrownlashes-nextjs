@@ -4,6 +4,7 @@ import "./globals.css";
 import { Navigation } from "@/components/layout/Navigation";
 import { Footer } from "@/components/layout/Footer";
 import { WhatsAppButton } from "@/components/layout/WhatsAppButton";
+import { ScrollToTopButton } from "@/components/layout/ScrollToTopButton";
 import { CookieBanner } from "@/components/layout/CookieBanner";
 import { JsonLd } from "@/components/seo/JsonLd";
 
@@ -43,7 +44,7 @@ export const metadata: Metadata = {
       "Wimpernverlängerung, Lash Lifting und Brow Lifting im Herzen Wiens – individuell, hochwertig und persönlich.",
     images: [
       {
-        url: "/images/hero-eye.jpg",
+        url: "/images/og-image.jpg",
         width: 1200,
         height: 630,
         alt: "Anita Brows & Lashes – Wimpernstudio in Wien",
@@ -55,7 +56,7 @@ export const metadata: Metadata = {
     title: "Anita Brows & Lashes | Wien 1010",
     description:
       "Wimpernverlängerung, Lash Lifting und Brow Lifting – individuell, hochwertig und persönlich.",
-    images: ["/images/hero-eye.jpg"],
+    images: ["/images/og-image.jpg"],
   },
   alternates: {
     canonical: siteUrl,
@@ -71,6 +72,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         <main>{children}</main>
         <Footer />
         <WhatsAppButton />
+        <ScrollToTopButton />
         <CookieBanner />
       </body>
     </html>

@@ -10,7 +10,7 @@ export function JsonLd() {
     "@context": "https://schema.org",
     "@type": "BeautySalon",
     name: business.name,
-    image: `${siteUrl}/images/hero-eye.jpg`,
+    image: `${siteUrl}/images/og-image.jpg`,
     url: siteUrl,
     telephone: business.phone,
     email: business.email,

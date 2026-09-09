@@ -11,7 +11,7 @@ export function PortraitQuote() {
           <div className="relative w-full bg-rose/50 md:flex md:h-full md:w-[58%] md:items-center md:justify-center lg:w-[60%]">
             <div className="relative aspect-[3/2] w-full max-h-full">
               <Image
-                src="/images/hero2.jpg"
+                src="/images/hero2.webp"
                 alt="Nahaufnahme eines natürlich geschminkten Gesichts mit gepflegten Augenbrauen und Wimpern"
                 fill
                 sizes="(min-width: 768px) 60vw, 100vw"

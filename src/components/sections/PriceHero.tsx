@@ -8,7 +8,7 @@ export function PriceHero() {
     <section className="relative">
       <div className="relative flex h-[62vh] min-h-[520px] w-full items-center justify-center overflow-hidden bg-ink">
         <Image
-          src="/images/hero1.jpg"
+          src="/images/hero1.webp"
           alt="Nahaufnahme eines lächelnden Gesichts mit gepflegten Wimpern und Augenbrauen"
           fill
           priority

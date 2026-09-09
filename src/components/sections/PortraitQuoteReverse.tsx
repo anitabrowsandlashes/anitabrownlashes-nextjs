@@ -28,7 +28,7 @@ export function PortraitQuoteReverse() {
           <div className="relative order-1 w-full bg-lilac/50 md:order-none md:flex md:h-full md:w-[58%] md:items-center md:justify-center lg:w-[60%]">
             <div className="relative aspect-[2/1] w-full max-h-full">
               <Image
-                src="/images/hero3.jpg"
+                src="/images/hero3.webp"
                 alt="Nahaufnahme einer Frau mit zusammengebundenen Haaren und natürlichem Make-up"
                 fill
                 sizes="(min-width: 768px) 60vw, 100vw"

@@ -30,7 +30,7 @@ export function InstagramPhone() {
     <div ref={ref} className="phone-mockup relative mx-auto w-[260px] sm:w-[300px] lg:w-[340px]">
       <div className="relative aspect-[1080/1920] w-full">
         <Image
-          src="/images/insta.mockup.png"
+          src="/images/insta.mockup.webp"
           alt="Instagram-Profil von Anita Brows & Lashes auf dem Smartphone"
           fill
           sizes="(min-width: 1024px) 340px, 60vw"

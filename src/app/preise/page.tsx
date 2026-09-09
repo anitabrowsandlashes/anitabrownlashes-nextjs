@@ -14,24 +14,24 @@ import {
 } from "@/lib/data/priceList";
 
 const wimpernGalleryImages = [
-  { src: "/images/wimperverl1.jpg", alt: "Ergebnis einer Wimpernverlängerung, Nahaufnahme" },
-  { src: "/images/wimperverl2.jpg", alt: "Ergebnis einer Wimpernverlängerung, Nahaufnahme" },
-  { src: "/images/wimperverl3.jpg", alt: "Ergebnis einer Wimpernverlängerung, Nahaufnahme" },
-  { src: "/images/wimperverl4.jpg", alt: "Ergebnis einer Wimpernverlängerung, Nahaufnahme" },
+  { src: "/images/wimperverl1.webp", alt: "Ergebnis einer Wimpernverlängerung, Nahaufnahme" },
+  { src: "/images/wimperverl2.webp", alt: "Ergebnis einer Wimpernverlängerung, Nahaufnahme" },
+  { src: "/images/wimperverl3.webp", alt: "Ergebnis einer Wimpernverlängerung, Nahaufnahme" },
+  { src: "/images/wimperverl4.webp", alt: "Ergebnis einer Wimpernverlängerung, Nahaufnahme" },
 ];
 
 const lashliftGalleryImages = [
-  { src: "/images/lashlift1.jpg", alt: "Ergebnis eines Lash Liftings, Nahaufnahme" },
-  { src: "/images/lashlift2.jpg", alt: "Ergebnis eines Lash Liftings, Nahaufnahme" },
-  { src: "/images/lashlift3.jpg", alt: "Ergebnis eines Lash Liftings, Nahaufnahme" },
-  { src: "/images/lashlift4.jpg", alt: "Ergebnis eines Lash Liftings, Nahaufnahme" },
+  { src: "/images/lashlift1.webp", alt: "Ergebnis eines Lash Liftings, Nahaufnahme" },
+  { src: "/images/lashlift2.webp", alt: "Ergebnis eines Lash Liftings, Nahaufnahme" },
+  { src: "/images/lashlift3.webp", alt: "Ergebnis eines Lash Liftings, Nahaufnahme" },
+  { src: "/images/lashlift4.webp", alt: "Ergebnis eines Lash Liftings, Nahaufnahme" },
 ];
 
 const browliftGalleryImages = [
-  { src: "/images/browlift1.jpg", alt: "Ergebnis eines Brow Liftings, Nahaufnahme" },
-  { src: "/images/browlift2.jpg", alt: "Ergebnis eines Brow Liftings, Nahaufnahme" },
-  { src: "/images/browlift3.jpg", alt: "Ergebnis eines Brow Liftings, Nahaufnahme" },
-  { src: "/images/browlift4.jpg", alt: "Ergebnis eines Brow Liftings, Nahaufnahme", focus: "center 18%" },
+  { src: "/images/browlift1.webp", alt: "Ergebnis eines Brow Liftings, Nahaufnahme" },
+  { src: "/images/browlift2.webp", alt: "Ergebnis eines Brow Liftings, Nahaufnahme" },
+  { src: "/images/browlift3.webp", alt: "Ergebnis eines Brow Liftings, Nahaufnahme" },
+  { src: "/images/browlift4.webp", alt: "Ergebnis eines Brow Liftings, Nahaufnahme", focus: "center 18%" },
 ];
 
 export const metadata: Metadata = {

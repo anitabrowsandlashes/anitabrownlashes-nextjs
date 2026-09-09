@@ -1,0 +1,23 @@
+# Cloudflare Pages – HTTP Security Header
+# 1:1 übernommen aus der früheren headers()-Konfiguration in next.config.ts.
+# Bei statischem Export (output: "export") wird headers() nicht angewendet,
+# daher werden die Header hier ausgeliefert.
+#
+# Content-Security-Policy:
+#   - script-src / style-src 'unsafe-inline': von Next.js benötigte Inline-
+#     Bootstrap-Skripte und Inline-Styles.
+#   - font-src 'self': Bodoni Moda wird über next/font selbst gehostet.
+#   - img-src 'self' data: alle Bilder liegen lokal in /images, plus data-URIs.
+#   - frame-src https://www.google.com: eingebettete Google-Maps-Karte
+#     (Contact-Section, Standort).
+#   - connect-src 'self': Client-Navigation/Prefetch von Next.js.
+#   Externe Links (Treatwell, WhatsApp/wa.me, Instagram, Facebook, tel:, mailto:)
+#   sind normale Navigationen und brauchen keine CSP-Freigabe.
+
+/*
+  Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
+  X-Frame-Options: SAMEORIGIN
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: camera=(), microphone=(), geolocation=()
+  Content-Security-Policy: default-src 'self'; img-src 'self' data:; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; font-src 'self'; frame-src https://www.google.com; connect-src 'self'

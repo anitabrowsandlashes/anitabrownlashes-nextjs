@@ -24,7 +24,7 @@ export function Hero() {
         */}
         <div className="absolute inset-0 max-sm:relative max-sm:inset-auto max-sm:h-[320px] max-sm:w-full max-sm:shrink-0 max-sm:overflow-hidden">
           <Image
-            src="/images/heromain.jpg"
+            src="/images/heromain.webp"
             alt="Drei lächelnde Frauen mit gepflegten Wimpern und Augenbrauen"
             fill
             priority

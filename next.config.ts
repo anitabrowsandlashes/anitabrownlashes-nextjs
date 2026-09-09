@@ -1,35 +1,23 @@
 import type { NextConfig } from "next";
 
-// Security headers – kein Tracking/Consent-Banner nötig, da aktuell keine
-// Analytics-/Werbe-Skripte eingebunden sind (nur eingebettete Google Maps-Karte).
-const securityHeaders = [
-  { key: "Strict-Transport-Security", value: "max-age=63072000; includeSubDomains; preload" },
-  { key: "X-Frame-Options", value: "SAMEORIGIN" },
-  { key: "X-Content-Type-Options", value: "nosniff" },
-  { key: "Referrer-Policy", value: "strict-origin-when-cross-origin" },
-  { key: "Permissions-Policy", value: "camera=(), microphone=(), geolocation=()" },
-  {
-    key: "Content-Security-Policy",
-    value: [
-      "default-src 'self'",
-      "img-src 'self' data:",
-      "script-src 'self' 'unsafe-inline'",
-      "style-src 'self' 'unsafe-inline'",
-      "font-src 'self'",
-      "frame-src https://www.google.com",
-      "connect-src 'self'",
-    ].join("; "),
-  },
-];
-
+/**
+ * Statischer Export für das Hosting über Cloudflare Pages.
+ *
+ * - `output: "export"` erzeugt beim `next build` den Ordner `out/` mit reinem
+ *   HTML/CSS/JS. Kein Node-Server, keine Vercel-Abhängigkeit.
+ * - `images.unoptimized: true` ist für den statischen Export zwingend, da der
+ *   Standard-Image-Loader von `next/image` einen Server zur Laufzeit braucht.
+ *   Alle Bilder liegen lokal in `public/images` und werden unverändert
+ *   ausgeliefert – daher vorab passend dimensionieren/komprimieren.
+ *
+ * HTTP-Security-Header: `headers()` wird bei `output: "export"` nicht
+ * angewendet. Die Header werden stattdessen über `public/_headers` im
+ * Cloudflare-Pages-Format ausgeliefert (identischer Regelsatz).
+ */
 const nextConfig: NextConfig = {
-  async headers() {
-    return [
-      {
-        source: "/:path*",
-        headers: securityHeaders,
-      },
-    ];
+  output: "export",
+  images: {
+    unoptimized: true,
   },
 };
 
