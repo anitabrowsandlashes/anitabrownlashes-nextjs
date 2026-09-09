@@ -8,8 +8,8 @@ export function Contact() {
         <Reveal className="mx-auto max-w-2xl text-center">
           <span className="eyebrow text-rose">Dein Besuch</span>
           <h2 className="mt-5 font-serif text-[2.3rem] leading-[1.1] tracking-[0.01em] text-white sm:text-5xl">
-            Schönheit beginnt mit{" "}
-            <em className="text-accent-on-dark not-italic">einem Termin</em>.
+            Zeit, deinen Blick{" "}
+            <em className="text-accent-on-dark not-italic">in Szene zu setzen.</em>
           </h2>
           <p className="mt-5 text-base leading-relaxed text-white/70">
             Ob Wimpern oder Brows – ich nehme mir Zeit für deine Wünsche und freue
