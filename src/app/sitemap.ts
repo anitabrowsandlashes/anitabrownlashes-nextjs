@@ -3,7 +3,7 @@ import type { MetadataRoute } from "next";
 // Erzwingt die statische Generierung von /sitemap.xml beim Export (output: "export").
 export const dynamic = "force-static";
 
-const siteUrl = "https://www.anitabrowslashes.at";
+const siteUrl = "https://www.anitabrowsandlashes.at";
 
 /**
  * Festes Datum der letzten inhaltlichen Aktualisierung. Bewusst kein

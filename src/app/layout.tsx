@@ -16,7 +16,7 @@ const bodoni = Bodoni_Moda({
   display: "swap",
 });
 
-const siteUrl = "https://www.anitabrowslashes.at";
+const siteUrl = "https://www.anitabrowsandlashes.at";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),

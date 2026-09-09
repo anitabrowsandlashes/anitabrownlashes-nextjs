@@ -36,7 +36,7 @@ export default function ImpressumPage() {
               <br />
               Web:{" "}
               <a href={business.website} className="hover:text-orchid" target="_blank" rel="noopener noreferrer">
-                {business.website}
+                www.anitabrowsandlashes.at
               </a>
             </p>
           </section>

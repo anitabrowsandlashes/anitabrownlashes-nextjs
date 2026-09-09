@@ -6,7 +6,7 @@ export const business = {
   email: "hallo@anitabrowsandlashes.at",
   emailHref: "mailto:hallo@anitabrowsandlashes.at",
   whatsapp: "https://wa.me/4369917160022",
-  website: "https://wimpernverlangerungwien.at/",
+  website: "https://www.anitabrowsandlashes.at",
   address: {
     street: "Ledererhof 7/4",
     zip: "1010",

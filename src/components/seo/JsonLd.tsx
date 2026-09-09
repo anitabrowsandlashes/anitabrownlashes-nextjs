@@ -3,7 +3,7 @@ import { faqItems } from "@/lib/data/faq";
 import { services } from "@/lib/data/services";
 import { testimonials } from "@/lib/data/testimonials";
 
-const siteUrl = "https://www.anitabrowslashes.at";
+const siteUrl = "https://www.anitabrowsandlashes.at";
 
 export function JsonLd() {
   const localBusiness = {
