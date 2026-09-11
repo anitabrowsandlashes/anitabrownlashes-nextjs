@@ -20,8 +20,10 @@ interface AnimatedQuoteProps {
 
 /** ms Verzögerung zwischen zwei Buchstaben; die Mobile-Geschwindigkeit wird
  * bewusst nur über kürzere CSS-Transition-Dauer geregelt (siehe globals.css),
- * damit Server- und Client-Rendering exakt gleich bleiben. */
-const STAGGER_MS = 30;
+ * damit Server- und Client-Rendering exakt gleich bleiben. Bewusst grosser
+ * Versatz für einen langsamen "Wave Reveal" (Welle läuft von links nach rechts
+ * durch den Text). */
+const STAGGER_MS = 55;
 
 interface WordToken {
   pi: number;
@@ -55,8 +57,10 @@ function tokenizeParts(parts: QuotePart[]): WordToken[] {
 }
 
 /**
- * Großes Editorial-Zitat mit weichem Letter-Reveal (opacity + translateY + blur,
- * von links nach rechts gestaffelt), einmalig beim Eintritt in den Viewport.
+ * Großes Editorial-Zitat mit langsamem "Wave Reveal": jeder Buchstabe steigt
+ * mit weichem Überschwingen von unten auf (opacity + translateY + leichte
+ * Rotation + Blur), stark von links nach rechts gestaffelt, sodass eine Welle
+ * durch den Text läuft. Einmalig beim Eintritt in den Viewport.
  * Wörter werden als nicht umbrechbare Einheiten gerendert, damit das responsive
  * Zeilen-Wrapping unangetastet bleibt. Für Screenreader steht der volle Text
  * zusätzlich als einfacher, nicht zerlegter Textknoten bereit.

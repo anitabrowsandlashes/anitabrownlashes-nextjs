@@ -177,10 +177,11 @@ body {
   }
 }
 
-/* Grosse Editorial-Zitate (Bild-/Statement-Sections): Buchstaben werden
-   weich "aufgedeckt", nicht getippt – opacity + Versatz + leichter Blur,
-   von links nach rechts gestaffelt. Wort-Wrapper bleiben ganz, damit das
-   Zeilen-Umbrechen normal am Leerzeichen passiert. */
+/* Grosse Editorial-Zitate (Bild-/Statement-Sections): langsamer "Wave Reveal".
+   Jeder Buchstabe steigt mit weichem Überschwingen von unten auf
+   (opacity + Versatz + leichte Rotation + Blur), stark von links nach rechts
+   gestaffelt – dadurch läuft eine Welle durch den Text. Wort-Wrapper bleiben
+   ganz, damit das Zeilen-Umbrechen normal am Leerzeichen passiert. */
 .letter-reveal-word {
   display: inline-block;
   white-space: nowrap;
@@ -189,25 +190,26 @@ body {
 .letter-reveal-char {
   display: inline-block;
   opacity: 0;
-  transform: translateY(10px);
-  filter: blur(3.5px);
+  transform: translateY(0.72em) rotate(5deg);
+  transform-origin: bottom left;
+  filter: blur(4px);
   transition:
-    opacity 460ms cubic-bezier(0.22, 1, 0.36, 1),
-    transform 460ms cubic-bezier(0.22, 1, 0.36, 1),
-    filter 460ms cubic-bezier(0.22, 1, 0.36, 1);
+    opacity 900ms cubic-bezier(0.22, 1, 0.36, 1),
+    transform 900ms cubic-bezier(0.34, 1.42, 0.5, 1),
+    filter 900ms cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .letter-reveal.is-visible .letter-reveal-char {
   opacity: 1;
-  transform: translateY(0);
+  transform: translateY(0) rotate(0);
   filter: blur(0);
 }
 
 @media (max-width: 639.98px) {
   .letter-reveal-char {
-    transform: translateY(6px);
-    filter: blur(2.5px);
-    transition-duration: 380ms;
+    transform: translateY(0.55em) rotate(4deg);
+    filter: blur(3px);
+    transition-duration: 760ms;
   }
 }
 
@@ -302,15 +304,21 @@ body {
 }
 
 /* Preis-Ergebnisgalerien (/preise): Bilder fliegen beim Scrollen einzeln
-   aus dem unteren Bildbereich in ihre finale Position. */
+   von links nach rechts in ihre finale Position. */
 [data-reveal].price-gallery-reveal {
-  transform: translateY(42px);
+  transform: translateX(-60px);
   transition-duration: 750ms;
   transition-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 [data-reveal].price-gallery-reveal.is-visible {
-  transform: translateY(0);
+  transform: translateX(0);
+}
+
+@media (max-width: 639.98px) {
+  [data-reveal].price-gallery-reveal {
+    transform: translateX(-32px);
+  }
 }
 
 #leistungen,
